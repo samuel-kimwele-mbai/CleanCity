@@ -1,3 +1,7 @@
+# 🐞 Defect Log
+
+This log tracks all known defects identified during testing.
+
 ---
 
 ## DEF-001
@@ -49,11 +53,7 @@ _Samuel Kimwele Mbai_
 **Attachments:**  
 - Screenshots of storage check & dashboard state.![image](https://github.com/user-attachments/assets/c5412371-2b5b-4fd5-b061-f992bd854ff9)
 ---
-# 🐞 Defect Log
 
-This log tracks all known defects identified during testing.
-
----
 
 ## DEF-002
 
