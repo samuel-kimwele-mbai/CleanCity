@@ -46,3 +46,32 @@ Verify that scheduling a new waste pickup saves the request in `localStorage` an
 
 **Author:** _Samuel Kimwele Mbai_  
 **Date:** _2025-07-09_
+
+### Test Case ID: TC-SM-002
+
+**Title:** Submit Community Post and Verify it is Saved
+
+**Description:**  
+Ensure that when a user submits a post through the community feed form, the post is saved correctly and persists on page reload.
+
+**Precondition:**  
+- User is logged in.  
+- User is on the community page.
+
+**Test Steps:**  
+1. Navigate to the Community page.  
+2. Fill out the post form with a content. ![image](https://github.com/user-attachments/assets/1a234ad5-8d42-48fc-a673-e63e0ed0dccf)
+ 
+3. Then click post.  
+4. Reload the page.  
+5. Check that the new post appears in the community feed.
+
+**Expected Result:**  
+- The new post is saved   
+- The community feed displays the saved post even after page reload.![image](https://github.com/user-attachments/assets/74c91221-af63-4bfa-b473-96258b8bab99)
+
+
+
+ 
+**Tested By:** Samuel Kimwele Mbai
+
