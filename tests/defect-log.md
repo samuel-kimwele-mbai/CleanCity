@@ -1,7 +1,3 @@
-# 🐞 Defect Log
-
-This log tracks all known defects identified during testing.
-
 ---
 
 ## DEF-001
