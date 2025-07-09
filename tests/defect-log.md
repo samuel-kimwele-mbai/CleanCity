@@ -106,4 +106,55 @@ _Martin Kimani_
 - ![image](https://github.com/user-attachments/assets/a19f5671-5d71-475a-9836-b0d589f3b027)
 - [WCAG Guideline 1.3.1 – Info and Relationships](https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships.html)
 
+## DEF-003
+
+**Title:**  
+Form Accepts Overly Long Inputs and Invalid Email Without Proper Validation
+
+**Detected By:**  
+Manual Edge Case Testing
+
+**Date Reported:**  
+_2025-07-07_
+
+**Related Test Case(s):**  
+[TC-MK-002]
+
+**Environment:**  
+- Local React App (`npm start`)  
+- Browser: Chrome  
+- Page: Pickup Scheduling Form (`/schedule`)
+
+**Description:**  
+The form fails to validate excessively long input in the **"Name"** field and does not enforce proper format validation in the **"Email"** field. The only check in place appears to be for the presence of the `@` symbol.
+
+**Steps to Reproduce:**  
+1. Go to the Pickup Scheduling form.  
+2. In the **Name** field, paste over 500 characters (e.g., lorem ipsum).  
+3. In the **Email** field, enter an invalid email like `example@gmail...` (missing domain).  
+4. Click **Submit**.  
+5. Observe behavior.
+
+**Expected Behavior:**  
+- App should **restrict Name input** (e.g., max 100 characters) or show a clear validation error.  
+- Email should be validated using a regex or HTML5 pattern (e.g., `user@example.com`) and **show an error message** for invalid formats.
+
+**Actual Behavior:**  
+- The form **accepts 500+ characters** in the Name field with no error or truncation.  
+- The Email field **accepts invalid formats** like `example@gmail.` without any feedback or warning.  
+- The form still submits successfully (depending on implementation).
+
+**Severity:**  
+Medium – affects data integrity and user input reliability.
+
+**Status:**  
+Open
+
+**Assigned To:**  
+_Martin Kimani_
+
+**Attachments:**  
+- Screenshot of input fields before and after submission
+   ![image](https://github.com/user-attachments/assets/45797129-0750-49f5-9aa2-c2403e7930de) 
+
 
