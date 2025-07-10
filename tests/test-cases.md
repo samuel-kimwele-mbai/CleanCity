@@ -49,7 +49,7 @@ Verify that scheduling a new waste pickup saves the request in `localStorage` an
 **Author:** _Samuel Kimwele Mbai_  
 **Date:** _2025-07-09_
 
-### Test Case ID: TC-SM-002
+# Test Case ID: TC-SM-002
 
 **Title:** Submit Community Post and Verify it is Saved
 
@@ -74,7 +74,7 @@ Ensure that when a user submits a post through the community feed form, the post
  
 **Tested By:** Samuel Kimwele Mbai
 
-### ✅ Test Case: TC-BN-001
+#  Test Case: TC-BN-001
 
 ## Title  
 Feedback Form Should Validate Request ID
@@ -118,7 +118,7 @@ Verify that the feedback form does not accept random or invalid Request IDs that
 **FAIL**
 
 ---
-### ✅ TC-BN-002
+# TC-BN-002
 
 **Title:**  
 Admin Panel – Cancel Option for Pending Pickups
@@ -151,7 +151,7 @@ Verify that admins can cancel pending pickups from the admin interface.
 ---
 **Tested by Bridget Ngugi**
 
-### ✅ TC-MK-001
+# ✅ TC-MK-001
 
 **Title:**  
 Accessibility: Missing `<h1>` on Blog Page
@@ -182,7 +182,7 @@ Ensure every page contains a semantic top-level `<h1>` heading for screen reader
 ---
 
 
-### ✅ TC-MK-002
+# ✅ TC-MK-002
 
 **Title:**  
 Input Validation for Long Name and Email Format
