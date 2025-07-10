@@ -69,9 +69,54 @@ Ensure that when a user submits a post through the community feed form, the post
 **Expected Result:**  
 - The new post is saved   
 - The community feed displays the saved post even after page reload.![image](https://github.com/user-attachments/assets/74c91221-af63-4bfa-b473-96258b8bab99)
-
-
-
  
 **Tested By:** Samuel Kimwele Mbai
+
+# ✅ Test Case: TC-SM-003
+
+## Title  
+Feedback Form Should Validate Request ID
+
+## Description  
+Verify that the feedback form does not accept random or invalid Request IDs that are not linked to any scheduled pickup. This ensures proper mapping and traceability of feedback to valid user requests.
+
+---
+
+## Preconditions  
+- User is on the **Feedback** page (`/feedback`)  
+- At least one real pickup request exists in the system (or assume fake data like REQ001)
+
+---
+
+## Test Steps  
+1. Navigate to the **Feedback** page.  
+2. In the **Request ID** field, enter an invalid ID such as `REQ9999` or `ABC123`.  
+3. Fill in the feedback/comment box with any message.  
+4. Click the **Submit** button.  
+5. Observe whether the system accepts or rejects the form submission.
+   ![image](https://github.com/user-attachments/assets/997c2418-5031-4d86-a47a-ccc5eea8aec3)
+
+
+---
+
+## Expected Result  
+- The system should reject the submission if the Request ID does not match a valid scheduled pickup.  
+- An error message should be displayed (e.g., “Invalid Request ID”).  
+- No data should be saved to localStorage or sent to the backend (if applicable).
+
+---
+
+## Actual Result  
+- The form **accepts** any input as a Request ID without checking its validity.  
+- Feedback is submitted and accepted for fake/non-existent requests.
+
+---
+
+## Status  
+**FAIL**
+
+---
+
+**Tested by Bridget Ngugi**
+
 
