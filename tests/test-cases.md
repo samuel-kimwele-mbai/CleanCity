@@ -4,7 +4,9 @@
 Dashboard Stats & Storage Update After Pickup
 
 ## Description  
+
 Verify that scheduling a new waste pickup saves the request in `localStorage` and updates the dashboard "Scheduled Pickups" chart or count.
+
 ---
 ## Preconditions  
 - User is logged in.  
@@ -72,7 +74,7 @@ Ensure that when a user submits a post through the community feed form, the post
  
 **Tested By:** Samuel Kimwele Mbai
 
-# ✅ Test Case: TC-SM-003
+# ✅ Test Case: TC-BN-001
 
 ## Title  
 Feedback Form Should Validate Request ID
@@ -114,6 +116,97 @@ Verify that the feedback form does not accept random or invalid Request IDs that
 
 ## Status  
 **FAIL**
+
+---
+## ✅ TC-BN-002
+
+**Title:**  
+Admin Panel – Cancel Option for Pending Pickups
+
+**Description:**  
+Verify that admins can cancel pending pickups from the admin interface.
+
+**Preconditions:**  
+- Admin panel accessible  
+- At least one pending request available
+
+**Test Steps:**  
+1. Open Admin Panel.  
+2. Locate "Pending Pickups" list.  
+3. Look for a **Cancel** button for each item.
+
+**Expected Result:**  
+- Each request has a cancel option.  
+- Clicking it removes the request with confirmation.
+
+**Actual Result:**  
+- No cancel button shown.  
+- No way to manage user requests.
+
+**Status:** FAIL  
+**Severity:** High  
+**Author:** Bridget Ngugi  
+**Linked Defect:** DEF-005
+
+---
+
+## ✅ TC-MK-001
+
+**Title:**  
+Accessibility: Missing `<h1>` on Blog Page
+
+**Description:**  
+Ensure every page contains a semantic top-level `<h1>` heading for screen readers and accessibility tools.
+
+**Preconditions:**  
+- App running in local dev environment  
+- axe DevTools or Lighthouse extension installed
+
+**Test Steps:**  
+1. Navigate to `/blog`.  
+2. Open DevTools → axe → Click Analyze.  
+3. Observe accessibility violations.
+
+**Expected Result:**  
+- One `<h1>` heading should be present and descriptive.
+
+**Actual Result:**  
+- No `<h1>` element found.
+
+**Status:** FAIL  
+**Severity:** Medium  
+**Author:** Martin Kimani  
+**Linked Defect:** DEF-002
+
+---
+
+## ✅ TC-MK-002
+
+**Title:**  
+Input Validation for Long Name and Email Format
+
+**Description:**  
+Check that the form enforces limits on name length and proper email formatting.
+
+**Preconditions:**  
+- Pickup scheduling form accessible
+
+**Test Steps:**  
+1. Paste over 500 characters in the **Name** field.  
+2. Enter an invalid email: `john@doe.`  
+3. Click Submit.
+
+**Expected Result:**  
+- Name field should restrict length or show error.  
+- Email field should show format error.
+
+**Actual Result:**  
+- Form accepts invalid inputs and submits.
+
+**Status:** FAIL  
+**Severity:** Medium  
+**Author:** Martin Kimani  
+**Linked Defect:** DEF-003
 
 ---
 
