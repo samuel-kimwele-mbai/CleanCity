@@ -74,7 +74,7 @@ Ensure that when a user submits a post through the community feed form, the post
  
 **Tested By:** Samuel Kimwele Mbai
 
-# ✅ Test Case: TC-BN-001
+### ✅ Test Case: TC-BN-001
 
 ## Title  
 Feedback Form Should Validate Request ID
@@ -118,7 +118,7 @@ Verify that the feedback form does not accept random or invalid Request IDs that
 **FAIL**
 
 ---
-## ✅ TC-BN-002
+### ✅ TC-BN-002
 
 **Title:**  
 Admin Panel – Cancel Option for Pending Pickups
@@ -149,8 +149,9 @@ Verify that admins can cancel pending pickups from the admin interface.
 **Linked Defect:** DEF-005
 
 ---
+**Tested by Bridget Ngugi**
 
-## ✅ TC-MK-001
+### ✅ TC-MK-001
 
 **Title:**  
 Accessibility: Missing `<h1>` on Blog Page
@@ -180,7 +181,8 @@ Ensure every page contains a semantic top-level `<h1>` heading for screen reader
 
 ---
 
-## ✅ TC-MK-002
+
+### ✅ TC-MK-002
 
 **Title:**  
 Input Validation for Long Name and Email Format
@@ -210,6 +212,6 @@ Check that the form enforces limits on name length and proper email formatting.
 
 ---
 
-**Tested by Bridget Ngugi**
+**Tested by Martin Kimani**
 
 
