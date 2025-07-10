@@ -155,6 +155,120 @@ _Martin Kimani_
 
 **Attachments:**  
 - Screenshot of input fields before and after submission
-   ![image](https://github.com/user-attachments/assets/45797129-0750-49f5-9aa2-c2403e7930de) 
+   ![image](https://github.com/user-attachments/assets/45797129-0750-49f5-9aa2-c2403e7930de)
+
+
+
+## DEF-004
+
+**Title:**
+Feedback Form Accepts Any Request ID Without Validation
+
+**Detected By:**
+Manual QA – Functional Testing
+
+**Date Reported:**
+*2025-07-09*
+
+**Related Test Case(s):**
+\[TC-BN-006]
+
+**Environment:**
+
+* Local React App (`npm start`)
+* Browser: Chrome
+* Page: Feedback (`/feedback`)
+
+**Description:**
+The Feedback form allows users to submit feedback using any text string as a Request ID — even if it does not match an existing or valid pickup request. This leads to data inconsistency and undermines traceability.
+
+There is no mechanism in place to:
+
+* Verify the Request ID exists
+* Autofill or restrict to valid IDs only
+* Display an error if an invalid ID is used
+
+**Steps to Reproduce:**
+
+1. Navigate to the Feedback page (`/feedback`)
+2. In the **Request ID** field, enter a made-up value (e.g., `REQ9999`)
+3. Type a comment in the **Feedback** field
+4. Click **Submit**
+5. Observe the result
+
+**Expected Behavior:**
+
+* The app should **validate** the entered Request ID against existing requests
+* An error message should appear if the ID is invalid or unrecognized
+* Optionally, the Request ID should be **autofilled or selected** from a dropdown list of real requests
+
+**Actual Behavior:**
+
+* The form **accepts any input** in the Request ID field
+* Feedback is **submitted even for non-existent IDs**
+* No validation or warning is triggered
+
+**Severity:**
+Medium — affects data accuracy and backend processing of feedback
+
+**Status:**
+Open
+
+**Assigned To:**
+*Bridget Ngugi*
+
+**Attachments:**
+![image](https://github.com/user-attachments/assets/5a6b7ff0-e0a2-44d9-b859-65e76e1551db)
+
+
+## DEF-005
+
+**Title:**  
+Missing “Cancel” Button in Admin Panel for Pending Pickups
+
+**Detected By:**  
+Manual Functional Testing
+
+**Date Reported:**  
+_2025-07-07_
+
+**Related Test Case(s):**  
+[TC-BR-002]
+
+**Environment:**  
+- Local HTML App (opened via Live Server)  
+- File: `index.html`  
+- Browser: Chrome
+
+**Description:**  
+According to test case TC-BR-002, admins should be able to cancel user pickup requests from the "Pending Pickups" section. However, the current Admin Panel UI does **not include a “Cancel” button**, making it impossible to complete this action.
+
+**Steps to Reproduce:**  
+1. Open `index.html` in Live Server  
+2. Log in as Admin (or simulate admin access)  
+3. Navigate to the **Admin Panel** → **Pending Pickups**  
+4. Observe that no “Cancel” option is present for any listed user request
+
+**Expected Behavior:**  
+- Each request in "Pending Pickups" should include a visible **"Cancel" button**  
+- On clicking "Cancel", the request should be removed from the list and show a **confirmation alert/message**
+
+**Actual Behavior:**  
+- No "Cancel" buttons are present  
+- No UI mechanism to remove or manage pickup requests as an admin
+
+**Severity:**  
+High — Admin functionality is incomplete and does not support request management
+
+**Status:**  
+Open
+
+**Assigned To:**  
+_Bridget Ngugi_
+
+**Attachments:**  
+- Screenshot of Admin Panel showing missing Cancel buttons  
+  ![image](https://github.com/user-attachments/assets/a39bde06-ccd4-4908-a881-e06a171bbdec)
+
 
 
