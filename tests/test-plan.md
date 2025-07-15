@@ -6,7 +6,7 @@
 **Author:** Martin    
 **Phase:** Test Planning and Execution (STLC Phase 2–3)  
 
-This test plan outlines the strategy, scope, methods, resources, and schedule for quality assurance (QA) testing of the CleanCity web application, a platform for waste management and community engagement. It consolidates deliverables for Week 1 (Phase 1, July 2, 2025) and Week 2 (Phase 2, July 9, 2025) and plans for Week 3 (Phase 3, July 16, 2025) per `submission.md`, aligning with the Software Testing Life Cycle (STLC) and `functional-requirements.md`.
+This test plan outlines the strategy, scope, methods, resources, and schedule for quality assurance (QA) testing of the CleanCity web application, a platform for waste management and community engagement. It consolidates deliverables for Week 1 (Phase 1, July 2, 2025) and Week 2 (Phase 2, July 9, 2025) and plans for Week 3 (Phase 3, July 16, 2025) per [`submission.md`](/docs/submission.md), aligning with the Software Testing Life Cycle (STLC) and [`functional-requirements.md`](/docs/functional-requirements.md).
 
 ## 1.2 Objectives
 - Validate 100% coverage of functional requirements (FR-001–FR-097) for authentication, waste management, dashboard, content management, and admin functions.
