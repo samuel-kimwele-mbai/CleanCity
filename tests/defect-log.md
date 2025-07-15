@@ -271,4 +271,61 @@ _Bridget Ngugi_
   ![image](https://github.com/user-attachments/assets/a39bde06-ccd4-4908-a881-e06a171bbdec)
 
 
+  ## DEF-006
+
+**Title:**  
+Weak Passwords Are Accepted During Registration Without Validation
+
+**Detected By:**  
+Manual QA
+
+**Date Reported:**  
+_2025-07-15_
+
+**Related Test Case(s):**  
+[TC-MT-002](../test-cases.md#tc-mt-002)
+
+**Environment:**  
+- Local React App (`npm start`)  
+- Browser: Chrome  
+- Page: Registration (`/register`)
+
+**Description:**  
+The registration form accepts passwords that do not meet the required security criteria (8+ characters, at least one uppercase letter, and one number). This leads to weak account protection.
+
+**Steps to Reproduce:**  
+1. Open the registration form (`http://localhost:3000/register`)  
+2. Use credentials:  
+   - Email: `user1@test.com`  
+   - Password: `weak`  
+3. Submit the form  
+4. Observe behavior  
+
+**Expected Behavior:**  
+- Form should display a validation error message:  
+  _“Password must be 8+ chars, include uppercase, number”_  
+- Registration should fail.
+
+**Actual Behavior:**  
+- Form accepted the weak password.  
+- User was redirected to the login page.  
+- No validation or error message shown.  
+- Chrome’s password manager triggered a warning about password security.
+
+**Severity:**  
+High — this impacts user security and violates FR-008.
+
+**Status:**  
+Open
+
+**Assigned To:**  
+_Martin kimani_
+
+**Attachments:**  
+- Screenshot of Chrome warning after password is accepted :
+- <img width="407" height="431" alt="image" src="https://github.com/user-attachments/assets/c8ff5b06-d53a-43b4-b949-8ddbf227ee08" />
+
+
+
+
 
