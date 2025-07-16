@@ -1,4 +1,4 @@
-9# 🐞 Defect Log
+# 🐞 Defect Log
 
 This log tracks all known defects identified during testing.
 
