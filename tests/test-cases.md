@@ -28,10 +28,7 @@ Verify that scheduling a new waste pickup saves the request in `localStorage` an
 - No new data is saved in `localStorage`.  
 - The dashboard count does **not** update after submission and refresh.
 
----
-## Attachments  
-- [ ![image](https://github.com/user-attachments/assets/22440435-4e16-449f-bc28-c5dc6a45af73)] Screenshot: `localStorage` after submission (empty).  
-- [ ![image](https://github.com/user-attachments/assets/e71753ce-6341-4d36-9a68-a171b977956c)] Screenshot: Dashboard stat before and after submission (unchanged).
+
 
 ---
 **Status:** FAIL  
@@ -63,7 +60,7 @@ Ensure that when a user submits a post through the community feed form, the post
 
 **Expected Result:**  
 - The new post is saved   
-- The community feed displays the saved post even after page reload.![image](https://github.com/user-attachments/assets/74c91221-af63-4bfa-b473-96258b8bab99)
+- The community feed displays the saved post even after page reload.
  
 
 **Status:** PASS  
