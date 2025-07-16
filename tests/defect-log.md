@@ -4,55 +4,76 @@ This log tracks all known defects identified during testing.
 
 ---
 
-## DEF-001
+# DEF-001: System allows scheduling pickups for past dates
 
-**Title:**  
-Pickup Request Not Saved or Reflected on Dashboard
+**Related Test Case:** TC-SM-004  
+**Functional Requirement Covered:** FR-013 — *System must reject pickup scheduling for past dates*  
+**Environment:** Localhost (`http://localhost:3000/`) — Chrome  
+**Reported By:** @samuel-kimwele-mbai  
+**Priority:** Medium  
+**Severity:** Major  
 
-**Detected By:**  
-Manual QA
-
-**Date Reported:**  
-_2025-07-09_
-
-**Related Test Case(s):**  
-[TC-SM-001]
-
-**Environment:**  
-- Local React App (`npm start`)
-- Browser: Chrome
-
-**Description:**  
-When a user schedules a new pickup:
-- The request is **not saved** in `localStorage` or any backend.
-- The **Dashboard** "Scheduled Pickups"  or count does not update to reflect the new request.
-
-**Steps to Reproduce:**  
-1. Go to **Dashboard** — record current pickups count.  
-2. Schedule a new pickup via the **Pickup Scheduler** form.  
-3. Inspect `localStorage` → no new pickup data.  
-4. Return to Dashboard → count unchanged.
-
-**Expected Behavior:**  
-- Pickup details should persist in `localStorage` under `scheduledPickups`.
-- Dashboard count should update automatically.
-
-**Actual Behavior:**  
-- No data saved.
-- Dashboard does not change.
-
-**Severity:**  
-High — Core functionality is broken.
-
-**Status:**  
-Open
-
-**Assigned To:**  
-_Samuel Kimwele Mbai_
-
-**Attachments:**  
-- Screenshots of storage check & dashboard state.![image](https://github.com/user-attachments/assets/c5412371-2b5b-4fd5-b061-f992bd854ff9)
 ---
+
+## Description
+
+When a user attempts to schedule a waste pickup for a date in the past (e.g., `2025-07-10`), the system **does not display an error message** and **saves the request**, which violates the expected input validation.
+
+---
+
+## Steps to Reproduce
+
+1. Open the CleanCity app in Chrome (`http://localhost:3000/`).
+2. Log in with:
+   - **Email:** `user1@test.com`
+   - **Password:** `Test123!`
+3. Navigate to the **Scheduling page**.
+4. Set the pickup date to a **past date** (`2025-07-10`).
+5. Click the **Submit** button.
+6. Observe the behavior and inspect `localStorage`.
+
+---
+
+## Expected Result
+
+- An error message: **“Cannot schedule past date”** must appear.
+- No pickup schedule should be saved in `localStorage`.
+
+---
+
+## Actual Result
+
+- No error message is displayed.
+- Past date is accepted and the pickup request is stored.
+
+---
+
+## Impact
+
+Accepting invalid past dates can lead to data inaccuracies, confusion for admin users, and misuse of scheduling resources.
+
+---
+
+## Attachments
+
+<img width="1217" height="882" alt="image" src="https://github.com/user-attachments/assets/3889f2f1-4bc5-4519-a046-0d527bcb0c01" />
+
+
+---
+
+## Proposed Fix
+
+- Add client-side validation to ensure selected date is **today or later**.
+- Block form submission if a past date is selected.
+- Display a user-friendly validation error: **“Cannot schedule past date”**.
+- Ensure the invalid data does not get saved in `localStorage`.
+
+---
+
+## Status
+
+- Logged as **DEF-001**
+- Linked to **TC-SM-004**
 
 
 ## DEF-002
