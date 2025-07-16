@@ -57,7 +57,6 @@ To validate the CleanCity application’s functionality, accessibility, usabilit
 ### 3.5 Community Feed
 | ID         | Description                                    | FR     | Test Data                  | Steps                                                                 | Expected Result                              | Actual Result | Defect ID | Tester |
 |------------|------------------------------------------------|--------|----------------------------|----------------------------------------------------------------------|----------------------------------------------|---------------|-----------|--------|
-| TC-SM-005 | Verify community post submission               | FR-041–FR-043 | `Test post`            | 1. Login. 2. Submit post. 3. Check feed.                            | Post appears in feed                        | Fail          | DEF-003   | Samuel |
 | TC-MT-007 | Verify post with XSS payload                   | FR-042 | `<script>alert(1)</script>` | 1. Login. 2. Submit post with XSS. 3. Check sanitization.           | XSS sanitized, no alert executed            | Pass          | -         | Martin |
 
 ### 3.6 Admin Panel
