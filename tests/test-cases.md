@@ -93,7 +93,7 @@ Verify that the feedback form does not accept random or invalid Request IDs that
 3. Fill in the feedback/comment box with any message.  
 4. Click the **Submit** button.  
 5. Observe whether the system accepts or rejects the form submission.
-   ![image](https://github.com/user-attachments/assets/997c2418-5031-4d86-a47a-ccc5eea8aec3)
+ 
 
 
 ---
