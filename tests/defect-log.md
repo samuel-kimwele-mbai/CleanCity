@@ -356,3 +356,69 @@ Medium
 
 <img width="800" height="314" alt="Image" src="https://github.com/user-attachments/assets/67992ac4-5677-4a00-86b9-2223c89afef7" />
 
+
+## DEF-008
+## 🐞 DEF-008 — Registration Does Not Store User in `localStorage`
+
+**ID:** DEF-008  
+**Title:** New user registration does not persist user data in localStorage  
+**Related Test Case:** TC-SM-001  
+**Reported By:** @samuel-kimwele-mbai  
+**Environment:** CleanCity Web App, Chrome Browser  
+**Severity:** Medium  
+**Priority:** High  
+
+---
+
+### 📄 Description
+When a new user registers with valid credentials, the application displays a success message on the UI. However, no new user record is actually saved in `localStorage`. Only the hardcoded demo accounts (`user@cleancity.com` and `admin@cleancity.com`) remain available. This prevents real user registration from working as intended.
+
+---
+
+### ✅ **Steps to Reproduce**
+1. Open the CleanCity app (`http://localhost:3000/`).
+2. Navigate to the **Register** page.
+3. Enter a valid email (`user1@test.com`) and password (`Test123!`).
+4. Click **Register**.
+5. Observe the success message.
+6. Open **Chrome DevTools → Application → Local Storage**.
+7. Confirm that no new user data has been stored.
+
+---
+
+### ✔️ **Expected Result**
+- A success message **“Registration successful”** appears.
+- New user data is added to `localStorage` under `ccUsers`.
+
+### ❌ **Actual Result**
+- The success message appears.
+- **No new user data** is stored. Only the demo accounts are present.
+
+---
+
+### 📎 **Attachments**
+- Screenshots showing `localStorage` before and after registration.
+- Related HTML & JS code snippets if needed.
+
+---
+
+### ⚠️ **Impact**
+This defect Blocks core authentication functionality.
+
+---
+
+### 🔧 **Suggested Fix**
+Add logic in `script.js` to store newly registered users in `localStorage` under the `ccUsers` key:
+- Load existing users array (`ccUsers`).
+- Append new user.
+- Save updated array back to `localStorage`.
+
+---
+
+**Status:** Open 
+**Labels:** `bug`, `registration`, `localStorage`, `QA`  
+**Assignee:** @samuel-kimwele-mbai  
+**Project:** CleanCity QA Testing > To Do
+
+
+
