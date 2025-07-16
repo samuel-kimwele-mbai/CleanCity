@@ -328,4 +328,22 @@ _Martin kimani_
 
 
 
+## DEF-007
+
+**Title:**
+Admin Cannot View Pending Pickup Requests in Admin Panel
+Description: When logged in as an admin, no pickup requests are visible, preventing request cancellation as required by FR-054. This blocks execution of TC-BT-005.
+
+Steps to Reproduce:
+
+- Log in as admin.
+- Navigate to Admin Panel.
+- Observe that no pickup requests are displayed, despite existing “Pending” requests.
+
+Expected Result: Admin should see a list of pickup requests with status info, including "Pending" ones.
+Actual Result: No requests are displayed, making cancellation impossible.
+Severity: Blocker
+Environment: CleanCity web app (https://cleancity.example.com/), Chrome
+
+<img width="800" height="314" alt="Image" src="https://github.com/user-attachments/assets/67992ac4-5677-4a00-86b9-2223c89afef7" />
 
