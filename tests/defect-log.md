@@ -1,4 +1,4 @@
-# 🐞 Defect Log
+9# 🐞 Defect Log
 
 This log tracks all known defects identified during testing.
 
@@ -281,7 +281,7 @@ Compromises user security, violating FR-008.
 
 ## DEF-007: Admin Cannot View Pending Pickup Requests
 
-**Related Test Case(s):** TC-BT-005  
+**Related Test Case(s):** TC-BT-004
 **Functional Requirement Covered:** FR-054  
 **Environment:** CleanCity web app (`https://cleancity.example.com/`), Chrome  
 **Reported By:** @Bbrnn  
@@ -361,3 +361,53 @@ Blocks core authentication functionality.
 - Open
 - Linked to TC-SM-001
 - Assigned To: Samuel Kimwele Mbai
+
+
+
+# DEF-009: Dashboard displays incorrect "Total Requests"  
+**Module:** Dashboard  
+**Severity:** High  
+**Priority:** Medium  
+**Reported By:** Bridget Ngugi  
+**Date Reported:** 2025-07-16 
+**Related Test case:** TC-BT-001
+
+**Environment:**  
+- URL: https://cleancity.example.com  
+- Browser: Chrome (latest)  
+- OS:  Windows 11
+- User: user1@test.com  
+
+---
+
+### ✅ Description
+After login, the Dashboard shows **"Total Requests" = 0**, but **localStorage shows 4**. This causes incorrect stats to be displayed to the user.
+
+---
+
+### 🔁 Steps to Reproduce
+1. Log in with user1@test.com / Test123!  
+2. Navigate to the Dashboard.  
+3. Note the "Total Requests" value = 0.  
+4. Open DevTools → Application → Local Storage.  
+5. Confirm "Total Requests" = 4.
+
+---
+
+### 📌 Expected Result
+Dashboard should display **"Total Requests" = 4**, matching the localStorage value.
+
+### ❌ Actual Result
+Dashboard displays **"Total Requests" = 0**, creating a mismatch.
+
+---
+### Evidence
+
+<img width="860" height="366" alt="Image" src="https://github.com/user-attachments/assets/40b498f7-7c46-4b23-bc02-89fec04c4c85" />
+
+<img width="707" height="285" alt="Image" src="https://github.com/user-attachments/assets/18d1b02b-fbd6-4620-b0c0-c7929ce87a74" />
+
+---
+
+### 💡 Suggested Fix
+Review the frontend logic fetching and displaying stats. Ensure it's correctly syncing with the data source (localStorage or API).
