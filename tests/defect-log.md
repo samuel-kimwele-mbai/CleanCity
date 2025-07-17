@@ -281,7 +281,7 @@ Compromises user security, violating FR-008.
 
 ## DEF-007: Admin Cannot View Pending Pickup Requests
 
-**Related Test Case(s):** TC-BT-005  
+**Related Test Case(s):** TC-BT-004
 **Functional Requirement Covered:** FR-054  
 **Environment:** CleanCity web app (`https://cleancity.example.com/`), Chrome  
 **Reported By:** @Bbrnn  
