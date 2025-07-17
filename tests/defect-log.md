@@ -364,14 +364,14 @@ Blocks core authentication functionality.
 
 
 
-#DEF-009
-**Title:** Dashboard displays incorrect "Total Requests"  
+# DEF-009: Dashboard displays incorrect "Total Requests"  
 **Module:** Dashboard  
 **Severity:** High  
 **Priority:** Medium  
 **Reported By:** Bridget Ngugi  
 **Date Reported:** 2025-07-16 
-**Related Test case:**TC-BT-001
+**Related Test case:** TC-BT-001
+
 **Environment:**  
 - URL: https://cleancity.example.com  
 - Browser: Chrome (latest)  
